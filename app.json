@@ -1,13 +1,31 @@
 {
   "expo": {
-    "name": "App",
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "custom photos permission",
+          "cameraPermission": "Allow $(PRODUCT_NAME) to open the camera",
+          "//": "Disables the microphone permission",
+          "microphonePermission": false
+        }
+      ]
+    ],
+    "permissions": {
+      "network": {
+        "internet": [
+          "*"
+        ]
+      }
+    },
+    "name": "Fast Food",
     "slug": "App",
     "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "orientation": "portrait and landscape",
+    "icon": "./src/assets/ic_logo_app.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./src/assets/ic_logo_app.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -15,16 +33,31 @@
       "**/*"
     ],
     "ios": {
+      "permissions": {
+        "network": {
+          "internet": [
+            "*"
+          ]
+        }
+      },
       "supportsTablet": true
     },
     "android": {
+      "permissions": {
+        "network": {
+          "internet": [
+            "*"
+          ]
+        }
+      },
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./src/assets/ic_logo_app.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.anonymous.App"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./src/assets/ic_logo_app.png"
     }
   }
 }
